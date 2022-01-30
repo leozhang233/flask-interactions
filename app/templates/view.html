@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}View messages{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% for index, row in ran_messages.iterrows() %}
+        <br><br>
+        <p align="center", style= "color:navy">
+        <i>{{row[2]}}</i>
+        </p>
+        <p align="right", style="color: firebrick">
+          -----  <b>{{row[1]}}</b>
+        </p>
+        <br>
+    {% endfor %}
+
+{% endblock %}
